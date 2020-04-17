@@ -30,6 +30,8 @@
         {
             this.radioButtonArchivo = new System.Windows.Forms.RadioButton();
             this.radioButtonConsola = new System.Windows.Forms.RadioButton();
+            this.URL = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radioButtonArchivo
@@ -54,11 +56,29 @@
             this.radioButtonConsola.Text = "Por Consola";
             this.radioButtonConsola.UseVisualStyleBackColor = true;
             // 
+            // URL
+            // 
+            this.URL.Location = new System.Drawing.Point(34, 68);
+            this.URL.Name = "URL";
+            this.URL.Size = new System.Drawing.Size(227, 20);
+            this.URL.TabIndex = 2;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(290, 64);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
             // Compilador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 606);
+            this.ClientSize = new System.Drawing.Size(881, 729);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.URL);
             this.Controls.Add(this.radioButtonConsola);
             this.Controls.Add(this.radioButtonArchivo);
             this.Name = "Compilador";
@@ -72,6 +92,8 @@
 
         private System.Windows.Forms.RadioButton radioButtonArchivo;
         private System.Windows.Forms.RadioButton radioButtonConsola;
+        private System.Windows.Forms.TextBox URL;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
 
