@@ -32,6 +32,9 @@
             this.radioButtonConsola = new System.Windows.Forms.RadioButton();
             this.URL = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.consola = new System.Windows.Forms.RichTextBox();
+            this.salida = new System.Windows.Forms.RichTextBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // radioButtonArchivo
@@ -72,11 +75,39 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // consola
+            // 
+            this.consola.Location = new System.Drawing.Point(34, 110);
+            this.consola.Name = "consola";
+            this.consola.Size = new System.Drawing.Size(331, 117);
+            this.consola.TabIndex = 4;
+            this.consola.Text = "";
+            // 
+            // salida
+            // 
+            this.salida.Location = new System.Drawing.Point(34, 271);
+            this.salida.Name = "salida";
+            this.salida.Size = new System.Drawing.Size(331, 128);
+            this.salida.TabIndex = 5;
+            this.salida.Text = "";
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.Location = new System.Drawing.Point(45, 234);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 6;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            // 
             // Compilador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(881, 729);
+            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.salida);
+            this.Controls.Add(this.consola);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.URL);
             this.Controls.Add(this.radioButtonConsola);
@@ -94,6 +125,9 @@
         private System.Windows.Forms.RadioButton radioButtonConsola;
         private System.Windows.Forms.TextBox URL;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.RichTextBox consola;
+        private System.Windows.Forms.RichTextBox salida;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
 
