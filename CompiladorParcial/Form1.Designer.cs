@@ -70,9 +70,9 @@
             this.radioButtonArchivo.Name = "radioButtonArchivo";
             this.radioButtonArchivo.Size = new System.Drawing.Size(106, 17);
             this.radioButtonArchivo.TabIndex = 0;
-            this.radioButtonArchivo.TabStop = true;
             this.radioButtonArchivo.Text = "Archivo de Texto";
             this.radioButtonArchivo.UseVisualStyleBackColor = true;
+            this.radioButtonArchivo.CheckedChanged += new System.EventHandler(this.radioButtonArchivo_CheckedChanged);
             // 
             // radioButtonConsola
             // 
@@ -81,9 +81,9 @@
             this.radioButtonConsola.Name = "radioButtonConsola";
             this.radioButtonConsola.Size = new System.Drawing.Size(82, 17);
             this.radioButtonConsola.TabIndex = 1;
-            this.radioButtonConsola.TabStop = true;
             this.radioButtonConsola.Text = "Por Consola";
             this.radioButtonConsola.UseVisualStyleBackColor = true;
+            this.radioButtonConsola.CheckedChanged += new System.EventHandler(this.radioButtonConsola_CheckedChanged);
             // 
             // URL
             // 
@@ -126,6 +126,7 @@
             this.btnCargar.TabIndex = 6;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // bntLimpiar
             // 
@@ -135,6 +136,7 @@
             this.bntLimpiar.TabIndex = 7;
             this.bntLimpiar.Text = "Limpiar";
             this.bntLimpiar.UseVisualStyleBackColor = true;
+            this.bntLimpiar.Click += new System.EventHandler(this.bntLimpiar_Click);
             // 
             // TablaSimbolos
             // 

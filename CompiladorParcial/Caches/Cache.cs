@@ -54,7 +54,7 @@ namespace CompiladorParcial.Caches
             return (lineas.Count >= numero && numero > 0);
         }
 
-        public static List<Linea> ObtenerLinear()
+        public static List<Linea> ObtenerLineas()
         {
             return lineas;
         }
