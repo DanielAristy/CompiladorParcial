@@ -38,6 +38,11 @@ namespace CompiladorParcial.AnalisisLexico
             Puntero = 1;
         }
 
+        private void DevolverPuntero()
+        {
+            Puntero = Puntero - 1;
+        }
+
         private void LeerSiguienteCaracter()
         {
 
@@ -54,7 +59,7 @@ namespace CompiladorParcial.AnalisisLexico
             else
             {
                 CaracterActual = LineaActual.Contenido.Substring(Puntero - 1, 1);
-                Puntero = Puntero + 1;
+                Puntero++;
             }
 
         }
