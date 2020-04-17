@@ -55,6 +55,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManejadorErrores\Error.cs" />
+    <Compile Include="ManejadorErrores\GestorErrores.cs" />
+    <Compile Include="ManejadorErrores\TipoError.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TablaSimbolos\TablaDummy.cs" />
@@ -90,7 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AnalisisSemantico\" />
-    <Folder Include="ManejadorErrores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

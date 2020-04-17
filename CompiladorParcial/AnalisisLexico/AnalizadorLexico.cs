@@ -11,69 +11,69 @@ namespace CompiladorParcial.AnalisisLexico
 {
     public class AnalizadorLexico
     {
-        public int NumeroLineaActual { get; set; }
-        public int Puntero { get; set; }
-        public String CaracterActual { get; set; }
-        public Linea LineaActual { get; set; }
-        String Lexema;
+        public int numeroLineaActual { get; set; }
+        public int puntero { get; set; }
+        public String caracterActual { get; set; }
+        public Linea lineaActual { get; set; }
+        String lexema;
 
         public AnalizadorLexico()
         {
-            NumeroLineaActual = 0;
+            numeroLineaActual = 0;
             CargarNuevaLinea();
         }
 
         private void CargarNuevaLinea()
         {
-            NumeroLineaActual = NumeroLineaActual + 1;
+            numeroLineaActual = numeroLineaActual + 1;
 
             
-            LineaActual = Cache.ObtenerLinea(NumeroLineaActual);
+            lineaActual = Cache.ObtenerLinea(numeroLineaActual);
 
-            if (LineaActual.Contenido.Equals("@EOF@"))
+            if (lineaActual.Contenido.Equals("@EOF@"))
             {
-                NumeroLineaActual = LineaActual.Numero;
+                numeroLineaActual = lineaActual.Numero;
             }
 
-            Puntero = 1;
+            puntero = 1;
         }
 
         private void DevolverPuntero()
         {
-            Puntero = Puntero - 1;
+            puntero = puntero - 1;
         }
 
         private void LeerSiguienteCaracter()
         {
 
-            if ("@EOF@".Equals(LineaActual.Contenido))
+            if ("@EOF@".Equals(lineaActual.Contenido))
             {
-                CaracterActual = LineaActual.Contenido;
+                caracterActual = lineaActual.Contenido;
 
             }
-            else if (Puntero > LineaActual.Contenido.Length)
+            else if (puntero > lineaActual.Contenido.Length)
             {
-                CaracterActual = "@FL@";
-                Puntero++;
+                caracterActual = "@FL@";
+                puntero++;
             }
             else
             {
-                CaracterActual = LineaActual.Contenido.Substring(Puntero - 1, 1);
-                Puntero++;
+                caracterActual = lineaActual.Contenido.Substring(puntero - 1, 1);
+                puntero++;
             }
 
         }
-        private void ConcatenarLexema()
+        private void concatenarLexema()
         {
-            Lexema = Lexema + CaracterActual;
+            lexema = lexema + caracterActual;
         }
         private void LimpiarLexema()
         {
-            Lexema = "";
+            lexema = "";
         }
         private void DevorarEspaciosBlanco()
         {
-            while (CaracterActual.Equals(" "))
+            while (caracterActual.Equals(" "))
             {
                 LeerSiguienteCaracter();
             }
@@ -101,7 +101,7 @@ namespace CompiladorParcial.AnalisisLexico
 
             while (continuarAnalisis)
             {
-
+                
             }
             if (componenteLexico.Equals("@EOF@"))
             {
