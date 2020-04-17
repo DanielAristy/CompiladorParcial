@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CompiladorParcial.Transversal
 {
-    class ComponenteLexico
+    public class ComponenteLexico
     {
         public String Lexema { get; set; }
         public Categoria Categoria { get; set; }

@@ -5,18 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using CompiladorParcial.Caches;
 using CompiladorParcial.Transversal;
+using CompiladorParcial.TablaSimbolos;
 
 namespace CompiladorParcial.AnalisisLexico
 {
     public class AnalizadorLexico
     {
-        private int NumeroLineaActual;
-        private int Puntero;
-        private String CaracterActual;
-        private Linea LineaActual;
+        public int NumeroLineaActual { get; set; }
+        public int Puntero { get; set; }
+        public String CaracterActual { get; set; }
+        public Linea LineaActual { get; set; }
         String Lexema;
 
-        public AnalisisLexico()
+        public AnalizadorLexico()
         {
             NumeroLineaActual = 0;
             CargarNuevaLinea();
