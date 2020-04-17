@@ -1,6 +1,6 @@
 ﻿namespace CompiladorParcial
 {
-    partial class Form1
+    partial class Compilador
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.radioButtonArchivo = new System.Windows.Forms.RadioButton();
+            this.radioButtonConsola = new System.Windows.Forms.RadioButton();
+            this.SuspendLayout();
+            // 
+            // radioButtonArchivo
+            // 
+            this.radioButtonArchivo.AutoSize = true;
+            this.radioButtonArchivo.Location = new System.Drawing.Point(34, 29);
+            this.radioButtonArchivo.Name = "radioButtonArchivo";
+            this.radioButtonArchivo.Size = new System.Drawing.Size(106, 17);
+            this.radioButtonArchivo.TabIndex = 0;
+            this.radioButtonArchivo.TabStop = true;
+            this.radioButtonArchivo.Text = "Archivo de Texto";
+            this.radioButtonArchivo.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonConsola
+            // 
+            this.radioButtonConsola.AutoSize = true;
+            this.radioButtonConsola.Location = new System.Drawing.Point(158, 29);
+            this.radioButtonConsola.Name = "radioButtonConsola";
+            this.radioButtonConsola.Size = new System.Drawing.Size(82, 17);
+            this.radioButtonConsola.TabIndex = 1;
+            this.radioButtonConsola.TabStop = true;
+            this.radioButtonConsola.Text = "Por Consola";
+            this.radioButtonConsola.UseVisualStyleBackColor = true;
+            // 
+            // Compilador
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(870, 606);
+            this.Controls.Add(this.radioButtonConsola);
+            this.Controls.Add(this.radioButtonArchivo);
+            this.Name = "Compilador";
+            this.Text = "Compilador";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RadioButton radioButtonArchivo;
+        private System.Windows.Forms.RadioButton radioButtonConsola;
     }
 }
 
