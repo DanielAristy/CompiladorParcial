@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using CompiladorParcial.Caches;
+using CompiladorParcial.AnalisisLexico;
+using CompiladorParcial.Transversal;
 
 namespace CompiladorParcial
 {
     public partial class Compilador : Form
     {
         string linea;
-        bool radioButtonSelected = false;
+        bool verificarEntrada = false;
         public Compilador()
         {
             InitializeComponent();
@@ -92,5 +94,34 @@ namespace CompiladorParcial
                 salida.SelectedText = linea.Numero + "-> " + linea.Contenido + '\n';
             }
         }
+        private void Analisis()
+        {
+            tablaSimbolo.Rows.Clear();
+            AnalizadorLexico analizador = new AnalizadorLexico();
+            ComponenteLexico lexico = analizador.Analizar();
+
+            while (!!"@EOF@".Equals(lexico.Lexema))
+            {
+                int column = tablaSimbolo.Rows.Add();
+                tablaSimbolo.Rows[column].Cells[0].Value = lexico.Categoria;
+                tablaSimbolo.Rows[column].Cells[1].Value = lexico.Lexema;
+                tablaSimbolo.Rows[column].Cells[2].Value = lexico.NumeroLinea;
+                tablaSimbolo.Rows[column].Cells[3].Value = lexico.PosicionIncial;
+                tablaSimbolo.Rows[column].Cells[4].Value = lexico.PosicionFinal;
+                lexico = analizador.Analizar();
+            }
+
+
+        }
+        private void btnCompilar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Compilador_Load(object sender, EventArgs e)
+        {
+        }
+
+        
     }
 }

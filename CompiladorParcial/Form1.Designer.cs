@@ -290,6 +290,7 @@
             this.btnCompilar.TabIndex = 14;
             this.btnCompilar.Text = "Compilar";
             this.btnCompilar.UseVisualStyleBackColor = true;
+            this.btnCompilar.Click += new System.EventHandler(this.btnCompilar_Click);
             // 
             // Compilador
             // 
@@ -313,6 +314,7 @@
             this.Controls.Add(this.radioButtonArchivo);
             this.Name = "Compilador";
             this.Text = "Compilador";
+            this.Load += new System.EventHandler(this.Compilador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tablaSimbolo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablaDummys)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
